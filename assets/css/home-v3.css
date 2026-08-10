@@ -956,7 +956,7 @@ body {
 .v3-accordion-style:not(:hover) .v3-acc-panel:first-child .v3-acc-hidden,
 .v3-acc-panel:hover .v3-acc-hidden {
   opacity: 1;
-  max-height: 120px;
+  max-height: 250px;
   transform: translateY(0);
   transition-delay: 0.2s;
   /* Wait for flex expansion */
