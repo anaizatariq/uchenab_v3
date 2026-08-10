@@ -1,0 +1,1763 @@
+body.acad {
+  --acad-ink: #14153a;
+  --acad-navy: var(--uc-primary);
+  --acad-navy-2: #2c2e78;
+  --acad-gold: var(--uc-gold);
+  --acad-paper: #ffffff;
+  --acad-paper-2: #f8f7f3;
+  --acad-paper-3: #f2f1ec;
+  --acad-line: #e7e4db;
+  --acad-line-soft: rgba(34, 35, 98, .09);
+  --acad-text: #40425e;
+  --acad-muted: #74768f;
+  --acad-radius: 16px;
+  --acad-radius-lg: 24px;
+  --acad-shadow-1: 0 2px 6px rgba(20, 21, 58, .04), 0 12px 32px -18px rgba(20, 21, 58, .22);
+  --acad-shadow-2: 0 30px 70px -40px rgba(20, 21, 58, .45);
+  --acad-gutter: clamp(1.25rem, 4vw, 3rem);
+  --acad-stack: clamp(3.25rem, 6vw, 5.5rem);
+  background: var(--acad-paper);
+  color: var(--acad-text);
+  -webkit-font-smoothing: antialiased;
+}
+
+body.acad main {
+  overflow-x: clip;
+}
+
+body.acad ::selection {
+  background: rgba(240, 178, 58, .35);
+  color: var(--acad-ink);
+}
+
+body.acad :focus-visible {
+  outline: 3px solid var(--acad-gold);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+/* --------------------------------------------------------------------------
+   1. HERO — one unified masthead for every academics page
+   -------------------------------------------------------------------------- */
+.acad-hero {
+  position: relative;
+  isolation: isolate;
+  color: #fff;
+  padding: clamp(3.5rem, 7vw, 6rem) 0 clamp(4.5rem, 8vw, 7rem);
+  background:
+    radial-gradient(1100px 520px at 82% -10%, rgba(240, 178, 58, .22), transparent 62%),
+    radial-gradient(900px 600px at 8% 110%, rgba(90, 95, 150, .55), transparent 60%),
+    linear-gradient(150deg, #1b1c4f 0%, var(--uc-primary) 45%, #101132 100%);
+  overflow: hidden;
+}
+
+.acad-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, .045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, .045) 1px, transparent 1px);
+  background-size: 76px 76px;
+  mask-image: radial-gradient(70% 90% at 30% 0%, #000 0%, transparent 78%);
+  -webkit-mask-image: radial-gradient(70% 90% at 30% 0%, #000 0%, transparent 78%);
+}
+
+.acad-hero::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--acad-gold) 22%, #fff3d4 50%, var(--acad-gold) 78%, transparent);
+  opacity: .85;
+}
+
+.acad-hero__media {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  background-size: cover;
+  background-position: center;
+  opacity: .16;
+  filter: saturate(.6);
+}
+
+.acad-hero__inner {
+  position: relative;
+  z-index: 2;
+  max-width: 940px;
+}
+
+.acad-crumbs {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .45rem;
+  font-family: var(--uc-ui);
+  font-size: .78rem;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: rgba(255, 255, 255, .62);
+  margin-bottom: 1.5rem;
+}
+
+.acad-crumbs a {
+  color: rgba(255, 255, 255, .78);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: color .25s ease, border-color .25s ease;
+}
+
+.acad-crumbs a:hover {
+  color: #fff;
+  border-color: var(--acad-gold);
+}
+
+.acad-crumbs .sep {
+  color: rgba(255, 255, 255, .32);
+}
+
+.acad-crumbs [aria-current] {
+  color: var(--acad-gold);
+}
+
+.acad-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: .6rem;
+  padding: .42rem 1.05rem .42rem .8rem;
+  border-radius: 999px;
+  background: rgba(240, 178, 58, .14);
+  border: 1px solid rgba(240, 178, 58, .38);
+  color: #ffd98a;
+  font-family: var(--uc-ui);
+  font-size: .74rem;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+
+.acad-kicker::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--acad-gold);
+  box-shadow: 0 0 0 4px rgba(240, 178, 58, .18);
+}
+
+.acad-hero__title {
+  font-family: var(--uc-serif);
+  font-weight: 400;
+  color: #fff;
+  font-size: clamp(2.15rem, 4.6vw, 3.6rem);
+  line-height: 1.08;
+  letter-spacing: -.01em;
+  margin: 1.35rem 0 0;
+  text-wrap: balance;
+}
+
+.acad-hero__lede {
+  margin: 1.15rem 0 0;
+  max-width: 62ch;
+  font-size: clamp(1.02rem, 1.25vw, 1.16rem);
+  line-height: 1.72;
+  color: rgba(255, 255, 255, .84);
+  font-weight: 300;
+}
+
+.acad-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .85rem;
+  margin-top: 2.25rem;
+}
+
+.acad-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: .6rem;
+  border-radius: 999px;
+  padding: .82rem 1.7rem;
+  font-family: var(--uc-ui);
+  font-size: .82rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 1px solid transparent;
+  transition: transform .25s ease, box-shadow .25s ease, background .25s ease, color .25s ease;
+}
+
+.acad-btn i {
+  font-size: 1rem;
+}
+
+.acad-btn--gold {
+  background: linear-gradient(135deg, #ffd071, var(--acad-gold));
+  color: #221d05;
+  box-shadow: 0 14px 30px -14px rgba(240, 178, 58, .85);
+}
+
+.acad-btn--gold:hover {
+  color: #221d05;
+  transform: translateY(-2px);
+  box-shadow: 0 20px 38px -16px rgba(240, 178, 58, .95);
+}
+
+.acad-btn--ghost {
+  border-color: rgba(255, 255, 255, .38);
+  color: #fff;
+  background: rgba(255, 255, 255, .06);
+}
+
+.acad-btn--ghost:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, .16);
+  transform: translateY(-2px);
+}
+
+.acad-btn--ink {
+  background: var(--acad-navy);
+  color: #fff;
+  box-shadow: 0 14px 30px -16px rgba(34, 35, 98, .9);
+}
+
+.acad-btn--ink:hover {
+  color: #fff;
+  background: var(--acad-navy-2);
+  transform: translateY(-2px);
+}
+
+.acad-btn--outline {
+  border-color: var(--acad-line);
+  color: var(--acad-navy);
+  background: #fff;
+}
+
+.acad-btn--outline:hover {
+  color: var(--acad-navy);
+  border-color: var(--acad-navy);
+  transform: translateY(-2px);
+}
+
+.acad-bg-muted {
+  background-color: #faf9f4;
+  border-radius: 20px;
+  padding: 3rem;
+  margin: 0 -3rem;
+}
+@media (max-width: 991px) {
+  .acad-bg-muted {
+    padding: 2rem;
+    margin: 0 -1rem;
+  }
+}
+
+/* =========================================================
+   V3 Proper Landing Page Flow
+   ========================================================= */
+
+@media (min-width: 768px) {
+  .border-end-md {
+    border-right: 1px solid rgba(0,0,0,0.1);
+  }
+}
+
+.acad-premium-accordion .accordion-button:not(.collapsed) {
+  background-color: #fff !important;
+  color: var(--uc-primary) !important;
+  box-shadow: none;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+.acad-premium-accordion .accordion-button:focus {
+  box-shadow: none;
+}
+.acad-premium-accordion .accordion-button::after {
+  filter: grayscale(1);
+}
+
+.acad-curriculum-table th {
+  letter-spacing: 1px;
+  background-color: #faf9f4;
+}
+.acad-curriculum-table td {
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+.acad-curriculum-table tr:last-child td {
+  border-bottom: none;
+}
+
+.acad-hover-lift {
+  transition: all 0.3s ease;
+}
+.acad-hover-lift:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08) !important;
+}
+
+@media (max-width: 767.98px) {
+  .acad-hero__actions {
+    gap: .5rem;
+  }
+
+  .acad-btn {
+    padding: .5rem .9rem;
+    font-size: .68rem;
+    gap: .3rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   2. SECTION SUBNAV — always visible, always oriented
+   -------------------------------------------------------------------------- */
+body.acad .uc-subnav {
+  position: sticky;
+  top: var(--acad-headerh, 76px);
+  z-index: 1030;
+  background: linear-gradient(180deg, rgba(16, 17, 50, .97), rgba(28, 29, 78, .96));
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(255, 255, 255, .1);
+  box-shadow: 0 14px 34px -22px rgba(0, 0, 0, .8);
+}
+
+body.acad .uc-subnav__inner {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: .45rem 0;
+}
+
+body.acad .uc-subnav__rail {
+  position: relative;
+  flex: 1;
+  min-width: 0;
+}
+
+body.acad .uc-subnav__rail::before,
+body.acad .uc-subnav__rail::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 46px;
+  pointer-events: none;
+  z-index: 2;
+  opacity: 0;
+  transition: opacity .25s ease;
+}
+
+body.acad .uc-subnav__rail::before {
+  left: 0;
+  background: linear-gradient(90deg, #14153a, transparent);
+}
+
+body.acad .uc-subnav__rail::after {
+  right: 0;
+  background: linear-gradient(270deg, #14153a, transparent);
+}
+
+body.acad .uc-subnav__rail[data-start="0"]::before,
+body.acad .uc-subnav__rail[data-end="0"]::after {
+  opacity: 1;
+}
+
+body.acad .uc-subnav__links {
+  display: flex;
+  gap: .3rem;
+  list-style: none;
+  margin: 0;
+  padding: .25rem 0;
+  overflow-x: auto;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+}
+
+body.acad .uc-subnav__links::-webkit-scrollbar {
+  display: none;
+}
+
+body.acad .uc-subnav__links li a {
+  display: inline-flex;
+  align-items: center;
+  padding: .58rem 1.05rem;
+  border-radius: 999px;
+  color: rgba(255, 255, 255, .74);
+  font-family: var(--uc-ui);
+  font-size: .855rem;
+  font-weight: 500;
+  letter-spacing: .005em;
+  white-space: nowrap;
+  text-decoration: none;
+  transition: color .2s ease, background .2s ease, box-shadow .2s ease;
+}
+
+body.acad .uc-subnav__links li a:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, .1);
+}
+
+body.acad .uc-subnav__links li a.active {
+  color: #221d05;
+  font-weight: 700;
+  background: linear-gradient(135deg, #ffd071, var(--acad-gold));
+  box-shadow: 0 8px 20px -10px rgba(240, 178, 58, .95);
+}
+
+body.acad .uc-subnav__hint {
+  display: none;
+}
+
+body.acad .uc-subnav__label {
+  display: none;
+}
+
+body.acad .uc-subnav__apply {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  padding: .55rem 1.15rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, .1);
+  border: 1px solid rgba(255, 255, 255, .22);
+  color: #fff;
+  font-family: var(--uc-ui);
+  font-size: .78rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background .25s ease, transform .25s ease;
+}
+
+body.acad .uc-subnav__apply:hover {
+  background: var(--acad-gold);
+  border-color: var(--acad-gold);
+  color: #221d05;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 991.98px) {
+
+  body.acad .uc-subnav__links li a {
+    font-size: .8rem;
+    padding: .5rem .9rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   3. FACT BAR — key answers before any scrolling
+   -------------------------------------------------------------------------- */
+body.acad .uc-program-stats,
+.acad-facts {
+  position: relative;
+  z-index: 5;
+  margin-top: 0;
+  padding: clamp(1.75rem, 3vw, 2.5rem) 0 0;
+}
+
+.acad-facts__card {
+  background: #fff;
+  border: 1px solid var(--acad-line);
+  border-radius: var(--acad-radius-lg);
+  box-shadow: var(--acad-shadow-2);
+  padding: clamp(1.25rem, 2.4vw, 1.9rem);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: clamp(1rem, 2vw, 1.5rem);
+}
+
+body.acad .uc-stats-bar {
+  background: #fff;
+  border: 1px solid rgba(240, 178, 58, 0.4); /* subtle golden border */
+  border-radius: 16px;
+  box-shadow: 0 30px 60px -15px rgba(20, 21, 58, 0.2), 0 0 25px rgba(240, 178, 58, 0.15); /* Highly pop up */
+  padding: clamp(1rem, 2vw, 1.5rem) clamp(1.5rem, 3vw, 2.5rem);
+  margin: 0 auto;
+  max-width: 1050px; /* width less of this strip */
+  overflow: visible;
+  position: relative;
+  z-index: 10;
+  transform: translateY(-8px);
+}
+
+body.acad .uc-stat-item {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: left;
+  gap: 1rem;
+  padding: 0.5rem 1rem;
+  transition: transform 0.3s ease;
+  border-radius: 12px;
+}
+
+body.acad .uc-stat-item:hover {
+  transform: translateY(-4px); /* Extra pop up on hover */
+}
+
+body.acad .uc-stat-item+.uc-stat-item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 15%;
+  bottom: 15%;
+  width: 1px;
+  background: linear-gradient(180deg, transparent, rgba(240, 178, 58, 0.3), transparent);
+}
+
+body.acad .uc-stat-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 54px;
+  height: 54px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, var(--acad-gold), #ffd071);
+  color: #221d05;
+  font-size: 1.6rem;
+  -webkit-text-stroke: 1px #221d05; /* Bold icon */
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 4px 12px rgba(240, 178, 58, 0.25);
+}
+
+body.acad .uc-stat-item:hover .uc-stat-icon {
+  background: linear-gradient(135deg, var(--acad-navy), var(--acad-navy-2));
+  color: var(--acad-gold);
+  -webkit-text-stroke: 1px var(--acad-gold);
+  box-shadow: 0 10px 20px -5px rgba(34, 35, 98, 0.4);
+  transform: scale(1.08);
+}
+
+body.acad .uc-stat-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+body.acad .uc-stat-label {
+  font-family: var(--uc-ui);
+  font-size: 0.75rem;
+  font-weight: 800; /* Bold font */
+  color: var(--acad-navy);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+}
+
+body.acad .uc-stat-value {
+  font-family: var(--uc-ui);
+  font-size: 1.15rem;
+  font-weight: 800; /* Bold font */
+  line-height: 1.2;
+  color: var(--acad-navy);
+}
+
+body.acad .uc-stat-item:hover .uc-stat-value {
+  color: var(--acad-navy-2);
+}
+
+@media (max-width: 991.98px) {
+  body.acad .acad-toc {
+    display: none !important;
+  }
+}
+
+@media (max-width: 767.98px) {
+  body.acad .uc-stats-bar {
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    padding: 1rem 0.5rem !important;
+    gap: 1.5rem 0;
+  }
+
+  body.acad .uc-stat-item {
+    flex: 0 0 50% !important;
+    width: 50% !important;
+    max-width: 50% !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    padding: 0 0.5rem !important;
+    border-top: 0 !important;
+  }
+
+  body.acad .uc-stat-text {
+    align-items: center !important;
+    text-align: center !important;
+    margin-top: 0.5rem;
+  }
+
+  body.acad .uc-stat-item+.uc-stat-item::before {
+    display: none !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   4. PAGE SHELL & SECTION RHYTHM
+   -------------------------------------------------------------------------- */
+body.acad .acad-shell {
+  padding: var(--acad-stack) 0;
+}
+
+body.acad .acad-band {
+  padding: var(--acad-stack) 0;
+}
+
+body.acad .acad-band--tint {
+  background: var(--acad-paper-2);
+  border-top: 1px solid var(--acad-line);
+  border-bottom: 1px solid var(--acad-line);
+}
+
+body.acad .uc-section-title,
+body.acad h2.uc-section-title {
+  font-family: var(--uc-serif);
+  font-weight: 400;
+  color: var(--acad-navy);
+  font-size: clamp(1.55rem, 2.7vw, 2.1rem);
+  line-height: 1.2;
+  letter-spacing: -.005em;
+  position: relative;
+  padding-top: 1.1rem;
+  margin-bottom: 1.6rem !important;
+}
+
+body.acad .uc-section-title::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 52px;
+  height: 3px;
+  border-radius: 3px;
+  background: linear-gradient(90deg, var(--acad-gold), rgba(240, 178, 58, .2));
+}
+
+body.acad .acad-eyebrow {
+  display: block;
+  font-family: var(--uc-ui);
+  font-size: .74rem;
+  font-weight: 700;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--uc-gold-2);
+  margin-bottom: .7rem;
+}
+
+/* --------------------------------------------------------------------------
+   5. EDITORIAL BODY — the reading experience
+   -------------------------------------------------------------------------- */
+body.acad .uc-rich {
+  font-size: 1.045rem;
+  line-height: 1.85;
+  color: var(--acad-text);
+  max-width: none;
+}
+
+@media (max-width: 767.98px) {
+  body.acad .uc-rich {
+    font-size: 0.94rem;
+    line-height: 1.65;
+  }
+
+  body.acad .uc-rich h4,
+  body.acad .uc-rich-heading {
+    font-size: 1.05rem;
+    margin: 1.75rem 0 .75rem;
+  }
+}
+
+/* Keep prose at a comfortable measure, let media/tables breathe full width */
+body.acad .uc-rich>p,
+body.acad .uc-rich>ul,
+body.acad .uc-rich>ol,
+body.acad .uc-rich>h3,
+body.acad .uc-rich>h4,
+body.acad .uc-rich>blockquote,
+body.acad .uc-rich .uc-editorial-text {
+  max-width: 74ch;
+}
+
+body.acad .uc-rich>*:first-child {
+  margin-top: 0;
+}
+
+body.acad .uc-rich p,
+body.acad .uc-editorial-text {
+  font-size: inherit;
+  line-height: inherit;
+  color: inherit;
+  margin: 0 0 1.15em;
+}
+
+body.acad .uc-rich strong {
+  color: var(--acad-ink);
+  font-weight: 600;
+}
+
+body.acad .uc-rich a:not(.acad-btn) {
+  color: var(--acad-navy);
+  text-decoration: underline;
+  text-decoration-color: rgba(240, 178, 58, .8);
+  text-underline-offset: 3px;
+  text-decoration-thickness: 2px;
+}
+
+body.acad .uc-rich a:not(.acad-btn):hover {
+  color: var(--uc-gold-2);
+}
+
+body.acad .uc-rich h3,
+body.acad .uc-rich h4,
+body.acad .uc-rich-heading {
+  font-family: var(--uc-ui);
+  font-size: 1.12rem;
+  font-weight: 700;
+  letter-spacing: -.005em;
+  color: var(--acad-navy);
+  margin: 2.4rem 0 .9rem;
+  padding-left: .95rem;
+  border-left: 3px solid var(--acad-gold);
+  line-height: 1.4;
+}
+
+body.acad .uc-rich h4 strong,
+body.acad .uc-rich-heading strong {
+  font-weight: 700;
+}
+
+body.acad .uc-rich ul,
+body.acad .uc-rich ol {
+  margin: 0 0 1.35em;
+  padding-left: 0;
+  list-style: none;
+}
+
+body.acad .uc-rich ol {
+  counter-reset: acad-ol;
+}
+
+body.acad .uc-rich ul>li,
+body.acad .uc-rich ol>li {
+  position: relative;
+  padding-left: 1.85rem;
+  margin-bottom: .6em;
+}
+
+body.acad .uc-rich ul>li::before {
+  content: "\F26E";
+  font-family: bootstrap-icons;
+  position: absolute;
+  left: 0;
+  top: .1em;
+  font-size: .85rem;
+  color: var(--uc-gold-2);
+}
+
+body.acad .uc-rich ol>li::before {
+  counter-increment: acad-ol;
+  content: counter(acad-ol);
+  position: absolute;
+  left: 0;
+  top: .28em;
+  width: 1.35rem;
+  height: 1.35rem;
+  border-radius: 50%;
+  background: rgba(34, 35, 98, .08);
+  color: var(--acad-navy);
+  font-family: var(--uc-ui);
+  font-size: .74rem;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body.acad .uc-rich blockquote {
+  margin: 2rem 0;
+  padding: 1.35rem 1.6rem;
+  border-left: 3px solid var(--acad-gold);
+  background: var(--acad-paper-2);
+  border-radius: 0 var(--acad-radius) var(--acad-radius) 0;
+  font-family: var(--uc-serif);
+  color: var(--acad-navy);
+}
+
+body.acad .uc-rich img {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--acad-radius);
+}
+
+/* --------------------------------------------------------------------------
+   6. TABLES — scannable, never overwhelming
+   -------------------------------------------------------------------------- */
+body.acad .acad-tablewrap {
+  position: relative;
+  margin: 1.75rem 0 2rem;
+  max-width: 100%;
+  overflow-x: auto;
+  border-radius: var(--acad-radius);
+  border: 1px solid var(--acad-line);
+  box-shadow: var(--acad-shadow-1);
+  background: #fff;
+  max-height: 520px;
+}
+
+body.acad .acad-tablewrap .table-responsive,
+body.acad .table-responsive {
+  border-radius: var(--acad-radius);
+  border: 1px solid var(--acad-line);
+  box-shadow: var(--acad-shadow-1);
+  background: #fff;
+  overflow: auto;
+  max-height: 520px;
+}
+
+body.acad table.uc-fee-table {
+  border: 0;
+  border-radius: 0;
+  margin: 0;
+  min-width: 460px;
+}
+
+body.acad table.uc-fee-table th {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background: var(--acad-navy);
+  color: #fff;
+  font-family: var(--uc-ui);
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .11em;
+  text-transform: uppercase;
+  padding: .85rem 1.1rem;
+  white-space: nowrap;
+}
+
+body.acad table.uc-fee-table td {
+  padding: .78rem 1.1rem;
+  border-top: 1px solid #eeece4;
+  font-family: var(--uc-ui);
+  font-size: .93rem;
+  color: var(--acad-text);
+  vertical-align: top;
+}
+
+body.acad table.uc-fee-table tbody tr:nth-child(even) {
+  background: #fbfaf7;
+}
+
+body.acad table.uc-fee-table tbody tr:hover {
+  background: rgba(240, 178, 58, .09);
+}
+
+body.acad table.uc-fee-table tbody td:first-child {
+  font-weight: 600;
+  color: var(--acad-ink);
+}
+
+body.acad .acad-tablewrap__hint {
+  display: none;
+  align-items: center;
+  gap: .4rem;
+  margin-top: .6rem;
+  font-family: var(--uc-ui);
+  font-size: .76rem;
+  font-weight: 600;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--acad-muted);
+}
+
+body.acad .acad-tablewrap.is-scrollable .acad-tablewrap__hint {
+  display: inline-flex;
+}
+
+body.acad .acad-fee-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 1rem;
+  margin: 1.75rem 0 1.25rem;
+  max-width: none;
+}
+
+@media (max-width: 767.98px) {
+  body.acad .acad-fee-grid {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    padding-bottom: 0.5rem;
+    margin-right: -1.25rem;
+    margin-left: -1.25rem;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  body.acad .acad-fee-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  body.acad .acad-fee-card {
+    flex: 0 0 85%;
+    scroll-snap-align: center;
+  }
+}
+
+body.acad .acad-fee-card {
+  background: #fff;
+  border: 1px solid var(--acad-line);
+  border-radius: var(--acad-radius);
+  padding: 1.15rem 1.25rem 1.25rem;
+  box-shadow: var(--acad-shadow-1);
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+
+body.acad .acad-fee-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(240, 178, 58, .55);
+  box-shadow: 0 22px 44px -28px rgba(20, 21, 58, .5);
+}
+
+body.acad .acad-fee-card__sem {
+  display: inline-flex;
+  align-items: center;
+  gap: .45rem;
+  font-family: var(--uc-ui);
+  font-size: .7rem;
+  font-weight: 700;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+  color: var(--uc-gold-2);
+  margin-bottom: .7rem;
+}
+
+body.acad .acad-fee-card__total {
+  font-family: var(--uc-serif);
+  font-size: 1.6rem;
+  color: var(--acad-navy);
+  line-height: 1.1;
+}
+
+body.acad .acad-fee-card__totlabel {
+  font-family: var(--uc-ui);
+  font-size: .72rem;
+  font-weight: 600;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--acad-muted);
+  margin-bottom: .9rem;
+  display: block;
+}
+
+body.acad .acad-fee-card dl {
+  margin: 0;
+  border-top: 1px dashed var(--acad-line);
+  padding-top: .75rem;
+}
+
+body.acad .acad-fee-card dl div {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  font-family: var(--uc-ui);
+  font-size: .84rem;
+  padding: .22rem 0;
+}
+
+body.acad .acad-fee-card dt {
+  font-weight: 500;
+  color: var(--acad-muted);
+}
+
+body.acad .acad-fee-card dd {
+  margin: 0;
+  font-weight: 600;
+  color: var(--acad-ink);
+}
+
+body.acad .acad-fee-note {
+  display: flex;
+  gap: .7rem;
+  align-items: flex-start;
+  background: var(--acad-paper-2);
+  border: 1px solid var(--acad-line);
+  border-left: 3px solid var(--acad-gold);
+  border-radius: 0 var(--acad-radius) var(--acad-radius) 0;
+  padding: .95rem 1.15rem;
+  font-family: var(--uc-ui);
+  font-size: .88rem;
+  color: var(--acad-text);
+  margin: 1.25rem 0 0;
+}
+
+body.acad .acad-fee-note i {
+  color: var(--uc-gold-2);
+  font-size: 1.05rem;
+  line-height: 1.3;
+}
+
+/* --------------------------------------------------------------------------
+   7. SIDEBAR / ON-THIS-PAGE NAVIGATION
+   -------------------------------------------------------------------------- */
+body.acad .acad-toc {
+  position: sticky;
+  top: calc(var(--acad-headerh, 76px) + 78px);
+}
+
+body.acad .acad-toc__head {
+  font-family: var(--uc-ui);
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  color: var(--acad-muted);
+  margin: 0 0 1rem;
+}
+
+body.acad .uc-program-sidebar {
+  position: relative;
+  border: 0;
+  border-left: 1px solid var(--acad-line);
+  border-radius: 0;
+  background: transparent;
+  gap: 0;
+}
+
+body.acad .uc-program-sidebar .uc-sidebar-link,
+body.acad .uc-program-sidebar .list-group-item {
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  padding: .62rem 0 .62rem 1.1rem;
+  margin-left: -1px;
+  border-left: 2px solid transparent;
+  font-family: var(--uc-ui);
+  font-size: .92rem;
+  font-weight: 500;
+  color: var(--acad-muted);
+  transition: color .2s ease, border-color .2s ease, padding-left .2s ease;
+}
+
+body.acad .uc-program-sidebar .uc-sidebar-link:hover {
+  color: var(--acad-navy);
+  border-left-color: rgba(240, 178, 58, .5);
+  padding-left: 1.25rem;
+}
+
+body.acad .uc-program-sidebar .uc-sidebar-link.active,
+body.acad .uc-program-sidebar .list-group-item.active {
+  color: var(--acad-navy);
+  font-weight: 700;
+  background: transparent;
+  border-left-color: var(--acad-gold);
+}
+
+body.acad .uc-sidebar-contact {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--acad-radius) !important;
+  background: linear-gradient(150deg, #1d1e55, var(--acad-navy)) !important;
+  box-shadow: var(--acad-shadow-1);
+  padding: 1.4rem !important;
+}
+
+body.acad .uc-sidebar-contact::after {
+  content: "";
+  position: absolute;
+  right: -40px;
+  top: -40px;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(240, 178, 58, .35), transparent 70%);
+}
+
+/* Mobile chip TOC */
+body.acad .acad-toc-mobile {
+  position: sticky;
+  top: calc(var(--acad-headerh, 60px) + 52px);
+  z-index: 1020;
+  background: rgba(255, 255, 255, .94);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--acad-line);
+  padding: .55rem 0;
+  margin-bottom: 1.75rem;
+}
+
+body.acad .acad-toc-mobile__scroll {
+  display: flex;
+  gap: .45rem;
+  overflow-x: auto;
+  scrollbar-width: none;
+  padding: .1rem var(--bs-gutter-x, .75rem);
+}
+
+body.acad .acad-toc-mobile__scroll::-webkit-scrollbar {
+  display: none;
+}
+
+body.acad .acad-toc-mobile a {
+  flex-shrink: 0;
+  padding: .42rem .95rem;
+  border-radius: 999px;
+  border: 1px solid var(--acad-line);
+  background: #fff;
+  color: var(--acad-muted);
+  font-family: var(--uc-ui);
+  font-size: .8rem;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+body.acad .acad-toc-mobile a.active {
+  background: var(--acad-navy);
+  border-color: var(--acad-navy);
+  color: #fff;
+}
+
+@media (min-width: 992px) {
+  body.acad .acad-toc-mobile {
+    display: none;
+  }
+}
+
+/* Content sections inside program pages */
+body.acad .acad-doc section[id] {
+  scroll-margin-top: calc(var(--acad-headerh, 76px) + 96px);
+  padding-bottom: clamp(2.25rem, 4vw, 3.25rem);
+  margin-bottom: clamp(2.25rem, 4vw, 3.25rem);
+  border-bottom: 1px solid var(--acad-line);
+}
+
+body.acad .acad-doc section[id]:last-child {
+  border-bottom: 0;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+/* Make sections look like rich cards on mobile */
+@media (max-width: 767.98px) {
+  body.acad .acad-shell {
+    background: var(--acad-paper-2);
+    border-top: 1px solid var(--acad-line);
+    padding-top: 1.5rem;
+    padding-bottom: 2rem;
+  }
+
+  body.acad .acad-doc section[id] {
+    background: #fff;
+    border: 1px solid var(--acad-line);
+    border-radius: var(--acad-radius-lg);
+    padding: 1.75rem 1.25rem;
+    margin-bottom: 1.25rem;
+    box-shadow: 0 8px 24px rgba(20, 21, 58, 0.04);
+    border-bottom: 1px solid var(--acad-line) !important;
+  }
+
+  body.acad .acad-doc section[id]:last-child {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.75rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   8. CARDS, LISTS, FILTERS
+   -------------------------------------------------------------------------- */
+body.acad .uc-simple-card {
+  height: 100%;
+  background: #fff;
+  border: 1px solid var(--acad-line);
+  border-radius: var(--acad-radius-lg);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--acad-shadow-1);
+  transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+}
+
+body.acad .uc-simple-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(240, 178, 58, .55);
+  box-shadow: 0 34px 60px -34px rgba(20, 21, 58, .55);
+}
+
+body.acad .uc-simple-card__img-wrapper {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: var(--acad-paper-3);
+}
+
+body.acad .uc-simple-card__img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .6s cubic-bezier(.2, .7, .3, 1);
+}
+
+body.acad .uc-simple-card:hover .uc-simple-card__img-wrapper img {
+  transform: scale(1.06);
+}
+
+body.acad .uc-simple-card__content {
+  padding: 1.4rem 1.5rem 1.1rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+body.acad .uc-simple-card__eyebrow {
+  font-family: var(--uc-ui);
+  font-size: .7rem;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--uc-gold-2);
+  margin-bottom: .55rem;
+}
+
+body.acad .uc-simple-card__title {
+  font-family: var(--uc-ui);
+  font-size: 1.16rem;
+  font-weight: 700;
+  line-height: 1.35;
+  color: var(--acad-ink);
+  margin-bottom: .6rem;
+}
+
+body.acad .uc-simple-card__title a {
+  color: inherit;
+  text-decoration: none;
+}
+
+body.acad .uc-simple-card__title a:hover {
+  color: var(--acad-navy);
+}
+
+body.acad .uc-simple-card p {
+  font-size: .95rem;
+  line-height: 1.65;
+  color: var(--acad-muted);
+}
+
+body.acad .uc-simple-card__footer {
+  margin-top: auto;
+  padding-top: 1rem;
+  border-top: 1px solid var(--acad-line);
+  font-family: var(--uc-ui);
+  font-size: .82rem;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--acad-navy);
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+
+body.acad .uc-simple-card__footer i,
+body.acad .uc-simple-card:hover .uc-simple-card__footer i {
+  transition: transform .3s ease;
+}
+
+body.acad .uc-simple-card:hover .uc-simple-card__footer i {
+  transform: translateX(5px);
+}
+
+body.acad .uc-simple-card__footer a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Program result list */
+body.acad .uc-course-item {
+  position: relative;
+  background: #fff;
+  border: 1px solid var(--acad-line);
+  border-radius: var(--acad-radius-lg);
+  padding: 1.6rem 1.75rem;
+  margin-bottom: 1rem;
+  box-shadow: var(--acad-shadow-1);
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+
+body.acad .uc-course-item:hover {
+  transform: translateY(-3px);
+  border-color: rgba(240, 178, 58, .55);
+  box-shadow: 0 28px 52px -34px rgba(20, 21, 58, .5);
+}
+
+body.acad .uc-course-item__title {
+  font-family: var(--uc-ui);
+  font-size: clamp(1.15rem, 1.9vw, 1.4rem);
+  font-weight: 700;
+  margin-bottom: .7rem;
+}
+
+body.acad .uc-course-item__desc {
+  font-size: .98rem;
+  line-height: 1.7;
+  color: var(--acad-muted);
+  margin-bottom: 1.15rem;
+  max-width: 78ch;
+}
+
+body.acad .uc-course-item__meta {
+  gap: .75rem 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px dashed var(--acad-line);
+}
+
+body.acad .uc-course-item__tags .badge {
+  border-radius: 999px;
+}
+
+body.acad .uc-filter-bar {
+  position: sticky;
+  top: calc(var(--acad-headerh, 76px) + 78px);
+  background: var(--acad-paper-2);
+  border: 1px solid var(--acad-line);
+  border-radius: var(--acad-radius-lg);
+  padding: 1.4rem 1.5rem !important;
+  max-height: calc(100vh - var(--acad-headerh, 76px) - 100px);
+  overflow-y: auto;
+  scrollbar-width: thin;
+}
+
+body.acad .uc-filter-bar .accordion-item {
+  background: transparent;
+  border: 0;
+  border-top: 1px solid var(--acad-line);
+}
+
+body.acad .uc-filter-bar .accordion-button {
+  background: transparent;
+  padding: .9rem 0;
+  font-family: var(--uc-ui);
+  font-size: .82rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--acad-navy);
+  box-shadow: none;
+}
+
+body.acad .uc-filter-bar .accordion-body {
+  padding: 0 0 1rem;
+}
+
+body.acad .form-check-input:checked {
+  background-color: var(--acad-navy);
+  border-color: var(--acad-navy);
+}
+
+/* Generic accordion polish */
+body.acad .accordion:not(.accordion-flush) .accordion-item {
+  border: 1px solid var(--acad-line);
+  border-radius: var(--acad-radius) !important;
+  margin-bottom: .75rem;
+  overflow: hidden;
+  background: #fff;
+}
+
+body.acad .accordion-button:not(.collapsed) {
+  background: rgba(240, 178, 58, .1);
+  color: var(--acad-navy);
+}
+
+/* --------------------------------------------------------------------------
+   9. CLOSING CTA
+   -------------------------------------------------------------------------- */
+body.acad .uc-cta,
+body.acad .acad-cta {
+  position: relative;
+  padding: clamp(3.5rem, 6vw, 5rem) 0;
+  color: #fff;
+  background:
+    radial-gradient(700px 340px at 88% 20%, rgba(240, 178, 58, .28), transparent 62%),
+    linear-gradient(120deg, #171849, var(--acad-navy) 60%, #23256c);
+  overflow: hidden;
+}
+
+body.acad .acad-cta__inner {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+body.acad .acad-cta h2,
+body.acad .uc-cta h2 {
+  font-family: var(--uc-serif);
+  font-weight: 400;
+  color: #fff;
+  font-size: clamp(1.6rem, 3vw, 2.3rem);
+  margin: 0 0 .6rem;
+}
+
+body.acad .acad-cta p,
+body.acad .uc-cta p {
+  color: rgba(255, 255, 255, .8);
+  max-width: 56ch;
+  margin: 0;
+  font-weight: 300;
+  line-height: 1.7;
+}
+
+body.acad .acad-cta__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .85rem;
+}
+
+/* --------------------------------------------------------------------------
+   10. MOTION, UTILITIES
+   -------------------------------------------------------------------------- */
+body.acad [data-acad-reveal] {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity .7s cubic-bezier(.2, .7, .3, 1), transform .7s cubic-bezier(.2, .7, .3, 1);
+  will-change: opacity, transform;
+}
+
+body.acad [data-acad-reveal].is-in {
+  opacity: 1;
+  transform: none;
+}
+
+body.acad .acad-top {
+  position: fixed;
+  right: 1.1rem;
+  bottom: 1.1rem;
+  z-index: 1040;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid var(--acad-line);
+  background: #fff;
+  color: var(--acad-navy);
+  box-shadow: var(--acad-shadow-1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all .3s ease;
+}
+
+body.acad .acad-top.is-on {
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+}
+
+body.acad .acad-top:hover {
+  background: var(--acad-navy);
+  color: #fff;
+}
+
+body.acad .acad-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 0;
+  z-index: 1060;
+  background: linear-gradient(90deg, var(--acad-gold), #fff2cf);
+  transition: width .12s linear;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  body.acad *,
+  body.acad *::before,
+  body.acad *::after {
+    animation-duration: .001ms !important;
+    transition-duration: .001ms !important;
+  }
+
+  body.acad [data-acad-reveal] {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Legacy overrides so old inline-styled blocks inherit the new system */
+body.acad .v2-page-hero,
+body.acad .uc-program-hero {
+  min-height: 0;
+}
+
+body.acad .display-3,
+body.acad .display-4,
+body.acad .display-6 {
+  font-family: var(--uc-serif);
+  font-weight: 400;
+}
+
+body.acad .py-5.my-5 {
+  padding-top: var(--acad-stack) !important;
+  padding-bottom: var(--acad-stack) !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+/* Legacy title rule removal + current-nav marker */
+body.acad .uc-section-title::after {
+  display: none;
+}
+
+body.acad .uc-section-title {
+  padding-bottom: 0;
+}
+
+body.acad .v2-nav__link.is-current {
+  color: var(--acad-navy);
+  font-weight: 700;
+}
+
+body.acad .v2-nav__link.is-current::after {
+  content: "";
+  display: block;
+  height: 2px;
+  border-radius: 2px;
+  margin-top: 4px;
+  background: var(--acad-gold);
+}
+
+/* =========================================================
+   INLINE EXPANDING PROGRAM SEARCH
+   ========================================================= */
+.acad-inline-search {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.acad-inline-search-btn {
+  /* Inherits from acad-btn acad-btn--ghost but we need specific sizing to transition */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 0.875rem 1.75rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow: hidden;
+  position: relative;
+  min-width: 250px;
+}
+
+.acad-inline-search-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #fff;
+}
+
+.acad-inline-search-text {
+  transition: opacity 0.3s ease;
+  white-space: nowrap;
+}
+
+/* The actual search input that is hidden by default */
+.acad-inline-search-input {
+  position: absolute;
+  top: 0;
+  left: 3rem;
+  /* Leave room for the search icon */
+  width: calc(100% - 4rem);
+  height: 100%;
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 1rem;
+  font-family: inherit;
+  outline: none;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.acad-inline-search-input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* Expanded State */
+.acad-inline-search.is-expanded .acad-inline-search-btn {
+  min-width: 400px;
+  background: rgba(255, 255, 255, 0.15);
+  border-color: #fff;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  justify-content: flex-start;
+  padding-left: 1.5rem;
+}
+
+.acad-inline-search.is-expanded .acad-inline-search-text {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.acad-inline-search.is-expanded .acad-inline-search-input {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Results Dropdown */
+.acad-search-results-dropdown {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  width: 100%;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  z-index: 1000;
+  opacity: 0;
+  transform: translateY(10px);
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  max-height: 350px;
+  overflow-y: auto;
+  text-align: left;
+}
+
+.acad-search-results-dropdown.is-active {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.acad-search-results-dropdown ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.acad-search-results-dropdown li {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.acad-search-results-dropdown li:last-child {
+  border-bottom: none;
+}
+
+.acad-search-results-dropdown a {
+  display: block;
+  padding: 12px 20px;
+  color: var(--uc-primary, #222362);
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: background 0.2s ease, padding-left 0.2s ease;
+}
+
+.acad-search-results-dropdown a:hover {
+  background: rgba(0, 0, 0, 0.03);
+  padding-left: 24px;
+  color: var(--uc-gold, #cc9933);
+}
+
+.acad-search-results-empty {
+  padding: 20px;
+  text-align: center;
+  color: #666;
+  font-size: 0.95rem;
+}
+
+/* Elegant quick links line below search */
+.acad-search-quicklinks {
+  position: absolute;
+  top: calc(100% + 15px);
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.7);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  white-space: nowrap;
+}
+
+.acad-search-quicklinks a {
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  margin: 0 5px;
+  transition: color 0.2s ease;
+}
+
+.acad-search-quicklinks a:hover {
+  color: var(--uc-gold, #cc9933);
+}
+
+.acad-inline-search.is-expanded .acad-search-quicklinks {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+@media (max-width: 768px) {
+  .acad-inline-search.is-expanded .acad-inline-search-btn {
+    min-width: 100%;
+  }
+}
+
+/* =========================================================
+   UX FIX: Spotlight Effect & Overflow Fix for Search
+   ========================================================= */
+body.search-is-active::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 10, 25, 0.65);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  z-index: 1030;
+  pointer-events: none;
+  /* Let js handle the outside click */
+  animation: fadeInSpotlight 0.3s ease forwards;
+}
+
+@keyframes fadeInSpotlight {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* Allow the dropdown to break out of the hero and sit above everything */
+.acad-hero.search-is-active {
+  overflow: visible !important;
+  z-index: 1050 !important;
+}
+
+.acad-inline-search.is-expanded {
+  z-index: 1060;
+}
+/* Custom Fee Tabs */
+.custom-fee-tabs .nav-link { color: var(--uc-primary); transition: all 0.3s ease; }
+.custom-fee-tabs .nav-link.active { background-color: var(--uc-gold) !important; color: #fff !important; }
+

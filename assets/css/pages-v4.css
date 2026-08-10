@@ -1,0 +1,278 @@
+
+body.uc3.u4 {
+  --u4-r: 18px;
+  --u4-r-lg: 26px;
+}
+
+/* -------------------------------------------------------------------------
+   1. HERO ADDITIONS image-led hero, meta strip
+   ------------------------------------------------------------------------- */
+body.u4 .u3-hero__media { opacity: .2; }
+body.u4 .u3-hero--photo .u3-hero__media { opacity: .28; }
+
+body.u4 .u3-hero__inner { max-width: 940px; }
+
+body.u4 .u4-hero__meta {
+  display: flex; flex-wrap: wrap; gap: .55rem; margin-top: 1.75rem; justify-content: center;
+}
+body.u4 .u4-chip {
+  display: inline-flex; align-items: center; gap: .45rem;
+  font-family: var(--uc-ui); font-size: .74rem; font-weight: 600; letter-spacing: .06em;
+  text-transform: uppercase; color: rgba(255, 255, 255, .82);
+  border: 1px solid rgba(255, 255, 255, .24); background: rgba(255, 255, 255, .07);
+  padding: .45rem .9rem; border-radius: 999px; backdrop-filter: blur(4px);
+}
+body.u4 .u4-chip i { color: var(--uc-gold); font-size: .9rem; }
+
+/* -------------------------------------------------------------------------
+   2. SECTION RAIL (in-page shortcut band under the subnav)
+   ------------------------------------------------------------------------- */
+body.u4 .u4-rail {
+  background: var(--u3-paper-2); border-bottom: 1px solid var(--u3-line);
+}
+body.u4 .u4-rail__inner {
+  display: flex; align-items: center; gap: 1.25rem; padding: .9rem 0; flex-wrap: wrap;
+}
+body.u4 .u4-rail__label {
+  font-family: var(--uc-ui); font-size: .7rem; font-weight: 700; letter-spacing: .18em;
+  text-transform: uppercase; color: var(--u3-muted); margin: 0;
+}
+body.u4 .u4-rail__items { display: flex; gap: 1.5rem; flex-wrap: wrap; margin: 0; padding: 0; list-style: none; }
+body.u4 .u4-rail__items li { display: flex; align-items: baseline; gap: .5rem; }
+body.u4 .u4-rail__items strong {
+  font-family: var(--uc-serif); font-size: 1.05rem; color: var(--u3-ink); line-height: 1;
+}
+body.u4 .u4-rail__items span { font-family: var(--uc-ui); font-size: .8rem; color: var(--u3-muted); }
+
+/* -------------------------------------------------------------------------
+   3. LEAD FIGURE inside the article
+   ------------------------------------------------------------------------- */
+body.u4 .u4-figure { margin: 0 0 2.25rem; }
+body.u4 .u4-figure__frame {
+  position: relative; overflow: hidden; border-radius: var(--u4-r-lg);
+  box-shadow: var(--u3-sh-1); background: var(--u3-paper-3);
+}
+body.u4 .u4-figure__frame img {
+  display: block; width: 100%; height: clamp(240px, 38vw, 420px);
+  object-fit: cover; border-radius: 0; box-shadow: none;
+}
+body.u4 .u4-figure figcaption {
+  font-family: var(--uc-ui); font-size: .8rem; color: var(--u3-muted);
+  margin-top: .75rem; padding-left: .9rem; border-left: 2px solid var(--u3-gold);
+  line-height: 1.6;
+}
+
+/* -------------------------------------------------------------------------
+   4. INDEX TILES â€” the "what's in this section" grid on hub pages
+   ------------------------------------------------------------------------- */
+body.u4 .u4-index { background: var(--u3-paper-2); border-top: 1px solid var(--u3-line); padding: clamp(3rem, 6vw, 5rem) 0; }
+body.u4 .u4-index__head { max-width: 62ch; margin-bottom: 2.25rem; }
+body.u4 .u4-index__head p.u3-kicker { color: var(--uc-gold-2); }
+body.u4 .u4-index__head h2 {
+  font-family: var(--uc-serif); color: var(--u3-ink); font-size: clamp(1.5rem, 2.8vw, 2.1rem); margin: 0 0 .65rem;
+}
+body.u4 .u4-index__head p { font-size: 1rem; line-height: 1.7; color: var(--u3-text); margin: 0; }
+
+body.u4 .u4-tiles { display: grid; gap: 1.1rem; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+@media (max-width: 991.98px) { body.u4 .u4-tiles { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 575.98px) { body.u4 .u4-tiles { grid-template-columns: minmax(0, 1fr); } }
+
+body.u4 .u4-tile {
+  display: flex; flex-direction: column; gap: .55rem; height: 100%;
+  background: #fff; border: 1px solid var(--u3-line); border-radius: var(--u4-r);
+  padding: 1.5rem 1.5rem 1.35rem; position: relative; overflow: hidden;
+  transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+}
+body.u4 .u4-tile::after {
+  content: ""; position: absolute; inset: 0 0 auto 0; height: 3px;
+  background: linear-gradient(90deg, var(--uc-gold), #ffd884);
+  transform: scaleX(0); transform-origin: 0 50%; transition: transform .4s ease;
+}
+body.u4 .u4-tile:hover { transform: translateY(-5px); box-shadow: var(--u3-sh-1); border-color: rgba(34, 35, 98, .18); }
+body.u4 .u4-tile:hover::after { transform: scaleX(1); }
+body.u4 .u4-tile__icon {
+  width: 44px; height: 44px; border-radius: 13px; background: var(--u3-paper-3);
+  color: var(--u3-navy); display: inline-flex; align-items: center; justify-content: center;
+  font-size: 1.2rem; margin-bottom: .35rem;
+}
+body.u4 .u4-tile strong {
+  font-family: var(--uc-serif); font-weight: 600; font-size: 1.05rem; color: var(--u3-ink); line-height: 1.35;
+}
+body.u4 .u4-tile span { font-family: var(--uc-ui); font-size: .88rem; line-height: 1.65; color: var(--u3-muted); }
+body.u4 .u4-tile em {
+  margin-top: auto; padding-top: .9rem; font-style: normal; font-family: var(--uc-ui);
+  font-size: .78rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--u3-navy);
+  display: inline-flex; align-items: center; gap: .4rem;
+}
+body.u4 .u4-tile:hover em { color: var(--uc-gold-2); }
+body.u4 .u4-tile em i { transition: transform .25s ease; }
+body.u4 .u4-tile:hover em i { transform: translateX(4px); }
+
+/* -------------------------------------------------------------------------
+   5. FULL-WIDTH LEGACY BLOCKS (people grids, feature grids from v1)
+   ------------------------------------------------------------------------- */
+body.u4 .u4-blocks { background: var(--u3-paper); padding: 0 0 clamp(2rem, 5vw, 3.5rem); }
+body.u4 .u4-blocks > section,
+body.u4 .u4-blocks > .u4-block { padding: clamp(2rem, 4vw, 3rem) 0 !important; background: transparent !important; }
+body.u4 .u4-blocks h2,
+body.u4 .u4-blocks h3 { font-family: var(--uc-serif); color: var(--u3-ink); }
+body.u4 .u4-blocks .uc-rich-heading { margin-bottom: 1.1rem; }
+
+/* legacy premium / feature cards, re-skinned to the v2 language */
+body.u4 .uc-premium-card,
+body.u4 .uc-feature-card {
+  background: #fff !important; border: 1px solid var(--uc-gold) !important;
+  border-radius: var(--u4-r) !important; box-shadow: none !important;
+  transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease !important;
+  overflow: hidden;
+  padding: 1.75rem !important;
+  height: 100%;
+}
+body.u4 .uc-premium-card:hover,
+body.u4 .uc-feature-card:hover {
+  transform: translateY(-5px) !important; box-shadow: var(--u3-sh-1) !important;
+  border-color: rgba(34, 35, 98, .18) !important;
+}
+body.u4 .uc-feature-icon { color: var(--u3-navy); font-size: 1.6rem; }
+body.u4 .uc-premium-card img { border-radius: 0; box-shadow: none; }
+
+body.u4 .u4-blocks .card {
+  border: 1px solid var(--u3-line); border-radius: var(--u4-r); box-shadow: none;
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+body.u4 .u4-blocks .card:hover { transform: translateY(-4px); box-shadow: var(--u3-sh-1); }
+
+/* legacy dignitary card */
+body.u4 .uc-dignitary-card {
+  display: grid; grid-template-columns: 260px minmax(0, 1fr); gap: 0;
+  background: #fff; border: 1px solid var(--u3-line); border-radius: var(--u4-r-lg);
+  overflow: hidden; box-shadow: var(--u3-sh-1);
+}
+@media (max-width: 767.98px) { body.u4 .uc-dignitary-card { grid-template-columns: minmax(0, 1fr); } }
+body.u4 .uc-dignitary-card__monogram-panel { min-height: 260px; background: var(--u3-navy); }
+body.u4 .uc-dignitary-card__monogram-panel img { width: 100%; height: 100%; object-fit: cover; border-radius: 0; box-shadow: none; }
+body.u4 .uc-dignitary-card__info { padding: 1.85rem 1.9rem; }
+body.u4 .uc-dignitary-card__badge {
+  display: inline-flex; align-items: center; gap: .4rem; font-family: var(--uc-ui);
+  font-size: .7rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase;
+  background: var(--u3-paper-3) !important; color: var(--u3-navy) !important;
+  padding: .4rem .8rem; border-radius: 999px; margin-bottom: .9rem;
+}
+body.u4 .uc-dignitary-card__name { font-family: var(--uc-serif); font-size: 1.35rem; color: var(--u3-ink); margin: 0 0 .35rem; }
+body.u4 .uc-dignitary-card__title { font-family: var(--uc-ui); font-size: .92rem; color: var(--u3-navy); font-weight: 600; }
+body.u4 .uc-dignitary-card__institution { font-family: var(--uc-ui); font-size: .85rem; color: var(--u3-muted); margin-top: .2rem; }
+
+/* legacy pull quote */
+body.u4 .uc-quote {
+  position: relative; margin: 2rem 0; padding: 1.75rem 1.9rem 1.75rem 3.4rem;
+  background: var(--u3-paper-2); border: 1px solid var(--u3-line); border-left: 3px solid var(--u3-gold);
+  border-radius: 0 var(--u4-r) var(--u4-r) 0; font-family: var(--uc-serif);
+  font-size: 1.1rem; line-height: 1.65; color: var(--u3-ink);
+}
+body.u4 .uc-quote::before {
+  content: "\201C"; position: absolute; left: 1.1rem; top: .55rem;
+  font-family: var(--uc-serif); font-size: 3rem; line-height: 1; color: var(--uc-gold); opacity: .55;
+}
+
+/* -------------------------------------------------------------------------
+   6. STUDENT-FACING HELPERS inside prose
+   ------------------------------------------------------------------------- */
+body.u4 .u4-steps { counter-reset: u4step; list-style: none; padding: 0; margin: 1.75rem 0; display: grid; gap: .85rem; }
+body.u4 .u4-steps li {
+  counter-increment: u4step; position: relative; padding: 1.15rem 1.35rem 1.15rem 3.6rem;
+  background: #fff; border: 1px solid var(--u3-line); border-radius: var(--u4-r);
+  font-size: .96rem; line-height: 1.7;
+}
+body.u4 .u4-steps li::before {
+  content: counter(u4step); position: absolute; left: 1.1rem; top: 1.05rem;
+  width: 30px; height: 30px; border-radius: 50%; background: var(--u3-navy); color: #fff;
+  font-family: var(--uc-ui); font-size: .82rem; font-weight: 700;
+  display: inline-flex; align-items: center; justify-content: center;
+}
+body.u4 .u4-steps li strong { display: block; font-family: var(--uc-ui); color: var(--u3-ink); margin-bottom: .15rem; }
+body.u4 .u4-steps li::marker { content: none; }
+
+body.u4 .u4-factgrid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .85rem; margin: 1.85rem 0; }
+@media (max-width: 575.98px) { body.u4 .u4-factgrid { grid-template-columns: minmax(0, 1fr); } }
+body.u4 .u4-factgrid div {
+  background: var(--u3-paper-2); border: 1px solid var(--u3-line); border-radius: var(--u4-r); padding: 1.15rem 1.3rem;
+}
+body.u4 .u4-factgrid dt,
+body.u4 .u4-factgrid strong {
+  display: block; font-family: var(--uc-ui); font-size: .72rem; font-weight: 700; letter-spacing: .14em;
+  text-transform: uppercase; color: var(--u3-muted); margin-bottom: .35rem;
+}
+body.u4 .u4-factgrid p { margin: 0; font-size: .95rem; line-height: 1.65; color: var(--u3-ink); }
+
+/* -------------------------------------------------------------------------
+   7. ASIDE ADDITIONS
+   ------------------------------------------------------------------------- */
+body.u4 .u3-card--outline {
+  background: var(--u3-paper-2); border: 1px dashed rgba(34, 35, 98, .22); box-shadow: none;
+}
+body.u4 .u3-card--outline p { font-size: .92rem; line-height: 1.7; margin: 0 0 1rem; color: var(--u3-text); }
+body.u4 .u3-card--outline .u3-btn { width: 100%; justify-content: center; }
+
+/* -------------------------------------------------------------------------
+   8. HOUSEKEEPING for legacy utility classes that fight the v2 layer
+   ------------------------------------------------------------------------- */
+body.u4 .uc-content { padding: 0; }
+body.u4 .placeholder-glow,
+body.u4 .u3-article .placeholder { display: none !important; }
+body.u4 .u3-article > .container,
+body.u4 .u3-article > .row { margin: 0; padding: 0; width: auto; max-width: none; }
+body.u4 .u3-article .uc-rich-heading { font-family: var(--uc-serif); }
+body.u4 .u3-article .text-white,
+body.u4 .u3-blocks .text-white { color: #fff; }
+
+/* -------------------------------------------------------------------------
+   9. LEGACY FEATURE BOXES inside prose, re-skinned to the v2 tile language
+   ------------------------------------------------------------------------- */
+body.u4 .uc-rich-feature-box {
+  height: 100%; background: #fff; border: 1px solid var(--uc-gold) !important;
+  border-radius: var(--u4-r) !important; padding: 1.5rem 1.45rem !important;
+  box-shadow: none !important; position: relative; overflow: hidden;
+  transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+}
+body.u4 .uc-rich-feature-box::after {
+  content: ""; position: absolute; inset: 0 0 auto 0; height: 3px;
+  background: linear-gradient(90deg, var(--uc-gold), #ffd884);
+  transform: scaleX(0); transform-origin: 0 50%; transition: transform .4s ease;
+}
+body.u4 .uc-rich-feature-box:hover { transform: translateY(-4px); box-shadow: var(--u3-sh-1); border-color: rgba(34, 35, 98, .18); }
+body.u4 .uc-rich-feature-box:hover::after { transform: scaleX(1); }
+body.u4 .uc-rich-feature-box i {
+  font-size: 1.2rem !important; color: var(--u3-navy) !important;
+  width: 44px; height: 44px; border-radius: 13px; background: var(--u3-paper-3);
+  display: inline-flex; align-items: center; justify-content: center; margin-bottom: .9rem;
+}
+body.u4 .uc-rich-feature-box h5 {
+  font-family: var(--uc-serif) !important; font-size: 1.02rem !important; color: var(--u3-ink) !important;
+  margin: 0 0 .45rem !important;
+}
+body.u4 .uc-rich-feature-box p {
+  font-family: var(--uc-ui); font-size: .9rem !important; line-height: 1.65 !important;
+  color: var(--u3-muted) !important; margin: 0 !important;
+}
+
+/* legacy rich list, re-skinned */
+body.u4 .u3-article .uc-rich-list { list-style: none; padding: 0; margin: 1.5rem 0; display: grid; gap: .5rem; }
+body.u4 .u3-article .uc-rich-list li {
+  background: var(--u3-paper-2); border: 1px solid var(--u3-line); border-radius: 12px;
+  padding: .85rem 1.1rem .85rem 2.4rem; margin: 0; font-size: .95rem; line-height: 1.65;
+}
+body.u4 .u3-article .uc-rich-list li::before { left: 1rem; top: 1.28em; }
+
+/* people grids break out of the reading measure so cards keep their rhythm */
+body.u4 .u3-article .row.u4-people { width: 100%; max-width: none; margin-inline: 0; }
+@media (min-width: 992px) {
+  body.u4 .u3-article .row.u4-people { width: calc(100% + 4rem); margin-left: -2rem; }
+}
+
+/* monogram stand-in for portraits that were never supplied */
+body.u4 .u4-mono {
+  width: 100%; height: 100%; min-height: 190px; display: flex; align-items: center; justify-content: center;
+  font-family: var(--uc-serif); font-size: 2.4rem; letter-spacing: .04em; color: var(--uc-gold);
+  background: linear-gradient(160deg, var(--u3-navy), #171847);
+}
+

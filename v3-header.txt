@@ -1,0 +1,429 @@
+<header class="v3-habib-header">
+    <div class="v3-top-bar d-none d-lg-block">
+      <div class="container-fluid px-3 px-xl-5 h-100">
+        <div class="d-flex justify-content-between align-items-center h-100">
+          <div class="v3-top-contact d-flex align-items-center gap-4">
+            <span><i class="bi bi-geo-alt-fill text-gold me-2"></i>G.T. Road, Gujrat</span>
+            <span><i class="bi bi-telephone-fill text-gold me-2"></i>053 111 243 622</span>
+            <span><i class="bi bi-envelope-fill text-gold me-2"></i>info@uchenab.edu.pk</span>
+          </div>
+          <div class="v3-top-actions d-flex align-items-center ms-auto">
+            <a href="https://admissions.uchenab.edu.pk/?CMA=woHwDew36/qx0cVwe0FXkaeQvbZ4lirMnNKPsq2C3tTeIqKIKYIMTuGr9Hw6oFbAG4fRgXi7tPX+H6LuOrl3GQ==" class="v3-btn-solid-gold me-3">Apply for Admissions</a>
+            <a href="https://sis.uchenab.edu.pk/" class="v3-btn-outline-gold me-4"><i class="bi bi-mortarboard-fill me-2"></i>Convocation 2026</a>
+            <div class="v3-top-links">
+              <div class="dropdown d-inline-block">
+                <a href="#" class="v3-text-link dropdown-toggle" data-bs-toggle="dropdown">Portals</a>
+                <div class="dropdown-menu shadow-lg border-0 mt-2 py-2" style="min-width: 250px; border-radius: 8px;">
+                  <h6 class="dropdown-header text-uppercase fw-bold" style="color: var(--uc-gold); font-size: 0.75rem; letter-spacing: 1px;">Students &amp; Applicants</h6>
+                  <a class="dropdown-item py-2" href="https://sis.uchenab.edu.pk/" target="_blank"><i class="bi bi-person-badge me-2 text-muted"></i>Student Portal (SIS)</a>
+                  <a class="dropdown-item py-2" href="https://admissions.uchenab.edu.pk/?CMA=woHwDew36/qx0cVwe0FXkaeQvbZ4lirMnNKPsq2C3tTeIqKIKYIMTuGr9Hw6oFbAG4fRgXi7tPX+H6LuOrl3GQ==" target="_blank"><i class="bi bi-file-earmark-text me-2 text-muted"></i>Admission Portal</a>
+                  <div class="dropdown-divider my-2"></div>
+                  <h6 class="dropdown-header text-uppercase fw-bold" style="color: var(--uc-gold); font-size: 0.75rem; letter-spacing: 1px;">Staff &amp; Administration</h6>
+                  <a class="dropdown-item py-2" href="https://fca.uchenab.edu.pk/" target="_blank"><i class="bi bi-easel me-2 text-muted"></i>Faculty Portal (FCA)</a>
+                  <a class="dropdown-item py-2" href="https://hms.uchenab.edu.pk/" target="_blank"><i class="bi bi-people me-2 text-muted"></i>HRIMS</a>
+                  <a class="dropdown-item py-2" href="https://ums.uchenab.edu.pk/" target="_blank"><i class="bi bi-shield-lock me-2 text-muted"></i>Admin Portal (UMS)</a>
+                  <a class="dropdown-item py-2" href="https://fis.uchenab.edu.pk/" target="_blank"><i class="bi bi-wallet2 me-2 text-muted"></i>Financial Info System</a>
+                </div>
+              </div>
+              <a href="../career/index.html" class="v3-text-link">Careers</a>
+              <a href="../alumni/index.html" class="v3-text-link">Alumni</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MAIN NAV BAR -->
+    <div class="v3-main-nav-bar shadow-sm">
+      <div class="container-fluid px-3 px-xl-5 h-100">
+        <div class="d-flex justify-content-between align-items-center h-100 py-2 py-lg-0">
+          <a class="v3-brand-logo-main" href="../index.html">
+            <img src="../assets/uchenab-logo.png" alt="University of Chenab" style="height: clamp(45px, 8vw, 65px); width: auto;" />
+          </a>
+          <div class="d-none d-lg-flex align-items-center h-100">
+            <ul class="v3-main-nav-list h-100 mb-0">
+              <li><a href="../index.html">Home</a></li>
+              <li class="v3-has-dropdown">
+                <a href="../about/index.html">About <i class="bi bi-chevron-down ms-1" style="font-size: 0.7em;"></i></a>
+                <div class="v3-dropdown-simple shadow-lg">
+                  <a href="../about/index.html" class="v3-dropdown-item">
+                    <div class="v3-di-text">
+                      <h5>Our Story</h5>
+                      <span>History, Vision &amp; Mission</span>
+                    </div>
+                  </a>
+                  <a href="../about/leadership.html" class="v3-dropdown-item">
+                    <div class="v3-di-text">
+                      <h5>Leadership</h5>
+                      <span>Chancellor &amp; Board of Governors</span>
+                    </div>
+                  </a>
+                  <a href="../about/accreditations.html" class="v3-dropdown-item">
+                    <div class="v3-di-text">
+                      <h5>Accreditations</h5>
+                      <span>Recognitions &amp; Affiliations</span>
+                    </div>
+                  </a>
+                  <a href="../about/location.html" class="v3-dropdown-item">
+                    <div class="v3-di-text">
+                      <h5>The Campus</h5>
+                      <span>Explore our facilities</span>
+                    </div>
+                  </a>
+                </div>
+              </li>
+              <li class="v3-has-dropdown">
+                <a href="../admissions/index.html">Admissions <i class="bi bi-chevron-down ms-1" style="font-size: 0.7em;"></i></a>
+                <div class="v3-dropdown-simple shadow-lg">
+                  <a href="../admissions/index.html" class="v3-dropdown-item">
+                    <div class="v3-di-text">
+                      <h5>Overview</h5>
+                      <span>Your route into UChenab</span>
+                    </div>
+                  </a>
+                  <a href="../admissions/how-to-apply.html" class="v3-dropdown-item">
+                    <div class="v3-di-text">
+                      <h5>How to Apply</h5>
+                      <span>Step-by-step application guide</span>
+                    </div>
+                  </a>
+                  <a href="../admissions/meet-the-team.html" class="v3-dropdown-item">
+                    <div class="v3-di-text">
+                      <h5>Admissions Team</h5>
+                      <span>Meet the people who can help</span>
+                    </div>
+                  </a>
+                </div>
+              </li>
+                            <li class="v3-has-dropdown">
+                <a href="../scholarships/index.html">Scholarships &amp; Aid <i class="bi bi-chevron-down ms-1" style="font-size: 0.7em;"></i></a>
+                <div class="v3-dropdown-mega shadow-lg">
+                  <div class="v3-mega-column">
+                    <div class="v3-mega-category">Core Scholarships</div>
+                    <a href="../scholarships/index.html" class="v3-dropdown-item">
+                      <div class="v3-di-text"><h5>Overview</h5></div>
+                    </a>
+                    <a href="../scholarships/merit.html" class="v3-dropdown-item">
+                      <div class="v3-di-text"><h5>Merit-Based</h5></div>
+                    </a>
+                    <a href="../scholarships/need-based.html" class="v3-dropdown-item">
+                      <div class="v3-di-text"><h5>Need-Based</h5></div>
+                    </a>
+                    <a href="../scholarships/inter-provincial.html" class="v3-dropdown-item">
+                      <div class="v3-di-text"><h5>Inter-Provincial</h5></div>
+                    </a>
+                    <a href="../scholarships/special.html" class="v3-dropdown-item">
+                      <div class="v3-di-text"><h5>Special Concessions</h5></div>
+                    </a>
+                  </div>
+                  
+                  <div class="v3-mega-column">
+                    <div class="v3-mega-category">Financial Assistance</div>
+                    <a href="../scholarships/financial-assistance.html" class="v3-dropdown-item">
+                      <div class="v3-di-text"><h5>Hardship Relief</h5></div>
+                    </a>
+                    <a href="../scholarships/orphan.html" class="v3-dropdown-item">
+                      <div class="v3-di-text"><h5>Orphan-Based</h5></div>
+                    </a>
+                    <a href="../scholarships/kinship.html" class="v3-dropdown-item">
+                      <div class="v3-di-text"><h5>Kinship-Based</h5></div>
+                    </a>
+                    <a href="../scholarships/employee.html" class="v3-dropdown-item">
+                      <div class="v3-di-text"><h5>Chenab Employee</h5></div>
+                    </a>
+                    <a href="../scholarships/employee-kin.html" class="v3-dropdown-item">
+                      <div class="v3-di-text"><h5>Employee Kin</h5></div>
+                    </a>
+                  </div>
+
+                  <div class="v3-mega-column">
+                    <div class="v3-mega-category">Specific Categories</div>
+                    <a href="../scholarships/alumni.html" class="v3-dropdown-item">
+                      <div class="v3-di-text"><h5>Alumni Scholarships</h5></div>
+                    </a>
+                    <a href="../scholarships/mphil-ms.html" class="v3-dropdown-item">
+                      <div class="v3-di-text"><h5>M.Phil / MS</h5></div>
+                    </a>
+                    <a href="../scholarships/disabilities.html" class="v3-dropdown-item">
+                      <div class="v3-di-text"><h5>Disabilities</h5></div>
+                    </a>
+                    <a href="../scholarships/sports.html" class="v3-dropdown-item">
+                      <div class="v3-di-text"><h5>Sports-Based</h5></div>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="v3-has-dropdown">
+                <a href="../academics/index.html">Academics <i class="bi bi-chevron-down ms-1" style="font-size: 0.7em;"></i></a>
+                <div class="v3-dropdown-mega shadow-lg">
+                  <div class="v3-mega-column">
+                    <div class="v3-mega-category">Overview &amp; Structure</div>
+                    <a href="../academics/index.html" class="v3-dropdown-item">
+                      <div class="v3-di-text"><h5>Academics Overview</h5></div>
+                    </a>
+                    <a href="../academics/faculties.html" class="v3-dropdown-item">
+                      <div class="v3-di-text"><h5>Faculties</h5></div>
+                    </a>
+                    <a href="../academics/academic-calendar.html" class="v3-dropdown-item">
+                      <div class="v3-di-text"><h5>Academic Calendar</h5></div>
+                    </a>
+                  </div>
+                  
+                  <div class="v3-mega-column">
+                    <div class="v3-mega-category">Degree Programs</div>
+                    <a href="../academics/undergraduate.html" class="v3-dropdown-item">
+                      <div class="v3-di-text"><h5>Undergraduate</h5></div>
+                    </a>
+                    <a href="../academics/postgraduate.html" class="v3-dropdown-item">
+                      <div class="v3-di-text"><h5>Postgraduate</h5></div>
+                    </a>
+                    <a href="../academics/doctoral.html" class="v3-dropdown-item">
+                      <div class="v3-di-text"><h5>Doctoral (PhD)</h5></div>
+                    </a>
+                    <a href="../academics/adp.html" class="v3-dropdown-item">
+                      <div class="v3-di-text"><h5>Associate Degrees (ADP)</h5></div>
+                    </a>
+                  </div>
+
+                  <div class="v3-mega-column">
+                    <div class="v3-mega-category">Other Programs</div>
+                    <a href="../academics/hnd.html" class="v3-dropdown-item">
+                      <div class="v3-di-text"><h5>Higher National Diploma (HND)</h5></div>
+                    </a>
+                    <a href="../academics/diplomas.html" class="v3-dropdown-item">
+                      <div class="v3-di-text"><h5>Diplomas</h5></div>
+                    </a>
+                    <a href="../academics/pgd.html" class="v3-dropdown-item">
+                      <div class="v3-di-text"><h5>Post Graduate Diplomas (PGD)</h5></div>
+                    </a>
+                    <a href="../academics/short-courses.html" class="v3-dropdown-item">
+                      <div class="v3-di-text"><h5>Short Courses</h5></div>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="v3-has-dropdown">
+                <a href="../campus-life/index.html">Life at UChenab <i class="bi bi-chevron-down ms-1" style="font-size: 0.7em;"></i></a>
+                <div class="v3-dropdown-mega shadow-lg">
+                  <div class="v3-mega-column">
+                    <div class="v3-mega-category">Core Services</div>
+                    <a href="../campus-life/index.html" class="v3-dropdown-item">
+                      <div class="v3-di-text"><h5>Overview</h5></div>
+                    </a>
+                    <a href="../campus-life/housing.html" class="v3-dropdown-item">
+                      <div class="v3-di-text"><h5>Housing</h5></div>
+                    </a>
+                    <a href="../campus-life/dining.html" class="v3-dropdown-item">
+                      <div class="v3-di-text"><h5>Dining</h5></div>
+                    </a>
+                    <a href="../campus-life/health.html" class="v3-dropdown-item">
+                      <div class="v3-di-text"><h5>Health Services</h5></div>
+                    </a>
+                    <a href="../campus-life/student-care.html" class="v3-dropdown-item">
+                      <div class="v3-di-text"><h5>Student Care</h5></div>
+                    </a>
+                    <a href="../campus-life/it-services.html" class="v3-dropdown-item">
+                      <div class="v3-di-text"><h5>IT Services</h5></div>
+                    </a>
+                    <a href="../campus-life/security.html" class="v3-dropdown-item">
+                      <div class="v3-di-text"><h5>Security &amp; Safety</h5></div>
+                    </a>
+                  </div>
+                  
+                  <div class="v3-mega-column">
+                    <div class="v3-mega-category">Campus Facilities</div>
+                    <a href="../campus-life/transport.html" class="v3-dropdown-item">
+                      <div class="v3-di-text"><h5>Transport</h5></div>
+                    </a>
+                    <a href="../campus-life/parking.html" class="v3-dropdown-item">
+                      <div class="v3-di-text"><h5>Parking</h5></div>
+                    </a>
+                    <a href="../campus-life/mosque.html" class="v3-dropdown-item">
+                      <div class="v3-di-text"><h5>Mosque</h5></div>
+                    </a>
+                    <a href="../campus-life/library.html" class="v3-dropdown-item">
+                      <div class="v3-di-text"><h5>Library</h5></div>
+                    </a>
+                    <a href="../campus-life/environment.html" class="v3-dropdown-item">
+                      <div class="v3-di-text"><h5>Environment &amp; Locality</h5></div>
+                    </a>
+                    <a href="../campus-life/auditorium.html" class="v3-dropdown-item">
+                      <div class="v3-di-text"><h5>Auditorium &amp; Conference</h5></div>
+                    </a>
+                  </div>
+
+                  <div class="v3-mega-column">
+                    <div class="v3-mega-category">Engagement &amp; Activities</div>
+                    <a href="../campus-life/community.html" class="v3-dropdown-item">
+                      <div class="v3-di-text"><h5>Community Engagement</h5></div>
+                    </a>
+                    <a href="../campus-life/clubs.html" class="v3-dropdown-item">
+                      <div class="v3-di-text"><h5>Clubs &amp; Societies</h5></div>
+                    </a>
+                    <a href="../campus-life/sports.html" class="v3-dropdown-item">
+                      <div class="v3-di-text"><h5>Sports</h5></div>
+                    </a>
+                    <a href="../campus-life/fitness.html" class="v3-dropdown-item">
+                      <div class="v3-di-text"><h5>Fitness</h5></div>
+                    </a>
+                    <a href="../campus-life/recreation.html" class="v3-dropdown-item">
+                      <div class="v3-di-text"><h5>Recreational Activities</h5></div>
+                    </a>
+                    <a href="../campus-life/academics.html" class="v3-dropdown-item">
+                      <div class="v3-di-text"><h5>Academics</h5></div>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="v3-has-dropdown">
+                <a href="../qec/index.html">QEC <i class="bi bi-chevron-down ms-1" style="font-size: 0.7em;"></i></a>
+                <div class="v3-dropdown-mega shadow-lg">
+                  <div class="v3-mega-column">
+                    <div class="v3-mega-category">About QEC</div>
+                    <a href="../qec/index.html" class="v3-dropdown-item">
+                      <div class="v3-di-text"><h5>Overview</h5></div>
+                    </a>
+                    <a href="../qec/functions.html" class="v3-dropdown-item">
+                      <div class="v3-di-text"><h5>Functions &amp; Objectives</h5></div>
+                    </a>
+                    <a href="../qec/policies.html" class="v3-dropdown-item">
+                      <div class="v3-di-text"><h5>Policies</h5></div>
+                    </a>
+                    <a href="../qec/committee.html" class="v3-dropdown-item">
+                      <div class="v3-di-text"><h5>QEC Committee</h5></div>
+                    </a>
+                    <a href="../qec/team.html" class="v3-dropdown-item">
+                      <div class="v3-di-text"><h5>Our Team</h5></div>
+                    </a>
+                    <a href="../qec/members.html" class="v3-dropdown-item">
+                      <div class="v3-di-text"><h5>Members</h5></div>
+                    </a>
+                  </div>
+                  
+                  <div class="v3-mega-column">
+                    <div class="v3-mega-category">Evaluations &amp; Assessment</div>
+                    <a href="../qec/self-assessment.html" class="v3-dropdown-item">
+                      <div class="v3-di-text"><h5>Self-Assessment Process</h5></div>
+                    </a>
+                    <a href="../qec/performance-evaluation.html" class="v3-dropdown-item">
+                      <div class="v3-di-text"><h5>Institutional Performance</h5></div>
+                    </a>
+                    <a href="../qec/pgpr.html" class="v3-dropdown-item">
+                      <div class="v3-di-text"><h5>Postgraduate Program Review</h5></div>
+                    </a>
+                    <a href="../qec/assessment.html" class="v3-dropdown-item">
+                      <div class="v3-di-text"><h5>Assessment</h5></div>
+                    </a>
+                  </div>
+
+                  <div class="v3-mega-column">
+                    <div class="v3-mega-category">Accreditations &amp; Compliance</div>
+                    <a href="../qec/hec-nocs.html" class="v3-dropdown-item">
+                      <div class="v3-di-text"><h5>HEC NOCs</h5></div>
+                    </a>
+                    <a href="../qec/accreditation.html" class="v3-dropdown-item">
+                      <div class="v3-di-text"><h5>Accreditation</h5></div>
+                    </a>
+                    <a href="../qec/memberships.html" class="v3-dropdown-item">
+                      <div class="v3-di-text"><h5>Memberships</h5></div>
+                    </a>
+                    <a href="../qec/institutional-research.html" class="v3-dropdown-item">
+                      <div class="v3-di-text"><h5>Institutional Research</h5></div>
+                    </a>
+                    <a href="../qec/activity-calendar.html" class="v3-dropdown-item">
+                      <div class="v3-di-text"><h5>Activity Calendar</h5></div>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="v3-has-dropdown">
+                <a href="../research/index.html">Research <i class="bi bi-chevron-down ms-1" style="font-size: 0.7em;"></i></a>
+                <div class="v3-dropdown-mega shadow-lg">
+                  <div class="v3-mega-column">
+                    <div class="v3-mega-category">Research Overview</div>
+                    <a href="../research/index.html" class="v3-dropdown-item">
+                      <div class="v3-di-text"><h5>Overview</h5></div>
+                    </a>
+                    <a href="../research/centers.html" class="v3-dropdown-item">
+                      <div class="v3-di-text"><h5>Facilities and Labs</h5></div>
+                    </a>
+                    <a href="../research/oric.html" class="v3-dropdown-item">
+                      <div class="v3-di-text"><h5>ORIC</h5></div>
+                    </a>
+                  </div>
+                  
+                  <div class="v3-mega-column">
+                    <div class="v3-mega-category">Management &amp; Output</div>
+                    <a href="../research/research-management.html" class="v3-dropdown-item">
+                      <div class="v3-di-text"><h5>Research Management</h5></div>
+                    </a>
+                    <a href="../research/innovation-commercialization.html" class="v3-dropdown-item">
+                      <div class="v3-di-text"><h5>Innovation &amp; Commercialization</h5></div>
+                    </a>
+                    <a href="../research/journal.html" class="v3-dropdown-item">
+                      <div class="v3-di-text"><h5>Research Journal</h5></div>
+                    </a>
+                  </div>
+
+                  <div class="v3-mega-column">
+                    <div class="v3-mega-category">Scholarly Work</div>
+                    <a href="../research/supervisor.html" class="v3-dropdown-item">
+                      <div class="v3-di-text"><h5>Finding a Supervisor</h5></div>
+                    </a>
+                    <a href="../research/dissertation.html" class="v3-dropdown-item">
+                      <div class="v3-di-text"><h5>Dissertation</h5></div>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="v3-has-dropdown">
+                <a href="../offices/index.html">Offices <i class="bi bi-chevron-down ms-1" style="font-size: 0.7em;"></i></a>
+                <div class="v3-dropdown-simple shadow-lg">
+                  <a href="../offices/admissions.html" class="v3-dropdown-item">
+                    <div class="v3-di-text">
+                      <h5>Office of Admissions</h5>
+                      <span>Enrollment &amp; Support</span>
+                    </div>
+                  </a>
+                  <a href="../offices/international-education.html" class="v3-dropdown-item">
+                    <div class="v3-di-text">
+                      <h5>Office of International Education &amp; Cooperation</h5>
+                      <span>Global Relations</span>
+                    </div>
+                  </a>
+                  <a href="../offices/press-media.html" class="v3-dropdown-item">
+                    <div class="v3-di-text">
+                      <h5>Office of Press Media &amp; Publications</h5>
+                      <span>News &amp; Publications</span>
+                    </div>
+                  </a>
+                  <a href="../offices/registrar.html" class="v3-dropdown-item">
+                    <div class="v3-di-text">
+                      <h5>Office of Registrar</h5>
+                      <span>Academic Records</span>
+                    </div>
+                  </a>
+                  <a href="../research/oric.html" class="v3-dropdown-item">
+                    <div class="v3-di-text">
+                      <h5>Office of Research, Innovation &amp; Commercialization</h5>
+                      <span>Research &amp; Enterprise</span>
+                    </div>
+                  </a>
+                  <a href="../offices/student-affairs.html" class="v3-dropdown-item">
+                    <div class="v3-di-text">
+                      <h5>Office of Student Affairs</h5>
+                      <span>Campus Life &amp; Welfare</span>
+                    </div>
+                  </a>
+                </div>
+              </li>
+            </ul>
+            <button class="v3-search-icon-dark ms-4" data-bs-toggle="collapse" data-bs-target="#v3SearchCollapse"><i class="bi bi-search"></i></button>
+          </div>
+          <button class="d-lg-none ms-auto" type="button" data-bs-toggle="offcanvas" data-bs-target="#v2MobileNav" aria-label="Toggle Navigation" style="background: transparent; border: none; font-size: 2.2rem; color: var(--uc-primary, #1e2056); padding: 0;">
+            <i class="bi bi-list"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
