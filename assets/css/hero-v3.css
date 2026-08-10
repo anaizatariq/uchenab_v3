@@ -137,8 +137,9 @@
   font-size: 1.1rem;
 }
 .v3-btn-gold-solid:hover {
-  background-color: #ffffff;
-  border-color: #ffffff;
+  background-color: var(--uc-gold, #f0b53e);
+  border: 1px solid var(--uc-gold, #f0b23a);
+
   color: var(--uc-primary) !important;
   box-shadow: 0 10px 30px rgba(255, 255, 255, 0.3);
 }
